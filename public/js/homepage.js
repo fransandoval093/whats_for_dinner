@@ -105,3 +105,24 @@ tl.from(".block",1,{
       ease: Expo.easeInOut,
       delay: 0.6,
   });
+
+
+  
+  const intro1 = document.getElementById("intro");
+  const helper = document.getElementById("helper");
+  const container = document.getElementById("container");
+  
+  gsap.to(container, {
+    x: () => -(container.offsetWidth - innerWidth),
+    ease: "none",
+    scrollTrigger: {
+      trigger: intro1,
+      start: "bottom top",
+      invalidateOnRefresh: true,
+      markers: true,
+      scrub: 1,
+      end: () => "+=" + (container.offsetWidth - innerWidth)
+    }
+  })
+  
+  
