@@ -152,7 +152,7 @@ nav {
   transform: translate(-50%, -50%);
   font-family: "Pacifico", cursive;
   font-size: 4em;
-  color: #ffffff;
+  color: #ffd52d;
   z-index: 2;
 }
 
@@ -285,4 +285,100 @@ nav {
   width: 28%;
   overflow: hidden;
   z-index: -2;
+}
+
+/* Home Page */
+.section-recipe {
+  position: relative;
+  margin-top: -200px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+.img {
+  display: inline-flex;
+  padding: 5%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.img-size {
+  max-width: 200px;
+}
+.recipe-info {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+#helper {
+  position: absolute;
+  top: 50vw;
+  left: 0;
+}
+
+#container {
+  height: 100vh;
+  position: fixed;
+  top: 500px;
+  white-space: nowrap;
+  font-size: 0;
+  z-index: -99;
+}
+#container > * {
+  font-size: 1rem;
+}
+
+#intro {
+  position: absolute;
+  left: 0;
+  top: 200%;
+  z-index: 10;
+  width: 50%;
+  height: 100%;
+  /* background: #fff; */
+}
+
+.module {
+  height: 100vh;
+  width: 100vw;
+  display: inline-flex;
+}
+.box1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.input {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: 4px solid #ffd52d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 26px;
+  color: #ffd52d;
+  outline: none;
+  transition: 0.5s;
+}
+.box1:hover input {
+  width: 350px;
+  background: #272133;
+  border-radius: 10px;
+}
+i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: #ffd52d;
+  transition: 0.2s;
+}
+.box1:hover i {
+  opacity: 0;
+  z-index: -1;
 }
