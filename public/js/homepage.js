@@ -126,6 +126,24 @@ tl.from(".block",1,{
   })
   
   
+<<<<<<< Updated upstream
+=======
+var virtualFridge = [];
+
+const addIngredient = (event) => {
+    event.preventDefault();
+    console.log('Added Ingredient');
+    const ingredient = document.querySelector('#ingredient-name').value.trim();
+    ingredient.push(virtualFridge);
+    console.log(virtualFridge);
+
+}
+document.getElementById('addbtn').addEventListener('click', addIngredient);
+
+
+//Francisco API handler below.
+
+>>>>>>> Stashed changes
 const newFormHandler = async (event) => {
     event.preventDefault();
   

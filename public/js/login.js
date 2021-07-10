@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 
 const intro = document.querySelector(".intro");
@@ -222,6 +223,8 @@ gsap.from(".both-logIn-signIn-card", {
   ease: Expo.easeInOut,
   duration: 1
 })
+=======
+>>>>>>> Stashed changes
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -273,3 +276,9 @@ document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
   
+<<<<<<< Updated upstream
+=======
+    .querySelector('#signupbtn')
+    .addEventListener('click', signupFormHandler);
+  
+>>>>>>> Stashed changes

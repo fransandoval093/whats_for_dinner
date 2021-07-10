@@ -1,0 +1,32 @@
+{
+  "name": "delicioso",
+  "version": "0.3.0",
+  "description": "A sample pantry for your hungry folks",
+  "engines": {
+    "node": "14.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fransandoval093/whats_for_dinner"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "pantry"
+  ],
+  "license": "MIT"
+}
