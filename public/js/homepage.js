@@ -142,7 +142,7 @@ document.getElementById('addbtn').addEventListener('click', addIngredient);
 
 
 //Francisco API handler below.
-
+//Pushing Again
 >>>>>>> Stashed changes
 const newFormHandler = async (event) => {
     event.preventDefault();
