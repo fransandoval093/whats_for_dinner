@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+=======
 const intro = document.querySelector(".intro");
 const more = document.querySelector(".more");
 const mark = document.querySelector(".mark");
@@ -123,23 +125,54 @@ tl.from(".block",1,{
       scrub: 1,
       end: () => "+=" + (container.offsetWidth - innerWidth)
     }
-  })
+})
   
-  
+var virtualFridge = [];
+
+const addIngredient = (event) => {
+    event.preventDefault();
+    console.log('Added Ingredient');
+    const ingredient = document.querySelector('#ingredient-name').value.trim();
+    ingredient.push(virtualFridge);
+    console.log(virtualFridge);
+
+}
+document.getElementById('addbtn').addEventListener('click', addIngredient);
+
+
+//Francisco API handler below.
+
+>>>>>>> Stashed changes
 const newFormHandler = async (event) => {
     event.preventDefault();
-  
-    const ingredientName = document.querySelector('#ingredient-name').value.trim();
-  
-    if (ingredientName) {
+    
+    if (virtualFridge > 0) {
       const response = await fetch(`/api/items`, {
         method: 'POST',
-        body: JSON.stringify({ ingredientName }),
+        body: JSON.stringify({ virtualFridge }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
+
+
     }
+    var ingredients = JSON.stringify(virtualFridge);
+    var apiUrl = '' + ingredients;
+    var apiKey = '';
+    fetch(apiUrl)
+    .then(function (res) {
+        return res.json()
+    })
+    .then(function (data) {
+        var recipe1 = data[0];
+        document.getElementById('recipe1title').innerHTML(recipe1.title);
+        document.getElementById('recipe1list').innerHTML(recipe1.list);
+        document.getElementById('recipe1instructions').innerHTML(recipe1.instructions);
+        document.getElementById('recipe1image').src=recipe1.image;
+        //copy paste for more cards w ingredients.
+    })
+
 };
   
 const delButtonHandler = async (event) => {

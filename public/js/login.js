@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+=======
 
 
 const intro = document.querySelector(".intro");
@@ -35,7 +37,7 @@ let heightPerFrame = 0;
 var animation = ["chaderr.json"]
 
 scene.on("update", (e) => {
-  heightPerFrame = anim.totalFrames / animationTime; // if total animation duration === total frames, then 1px height scroll = 1 frame moved
+  //heightPerFrame = anim.totalFrames / animationTime; // if total animation duration === total frames, then 1px height scroll = 1 frame moved
   delay = Math.round(e.scrollPos * heightPerFrame);
   anim.goToAndStop(delay, true);
 });
@@ -222,6 +224,7 @@ gsap.from(".both-logIn-signIn-card", {
   ease: Expo.easeInOut,
   duration: 1
 })
+>>>>>>> Stashed changes
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -245,7 +248,7 @@ const loginFormHandler = async (event) => {
   
 const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+    console.log('CLICKED!');
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -270,6 +273,12 @@ document
     .addEventListener('submit', loginFormHandler);
   
 document
+<<<<<<< Updated upstream
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
   
+=======
+    .querySelector('#signupbtn')
+    .addEventListener('click', signupFormHandler);
+  
+>>>>>>> Stashed changes
