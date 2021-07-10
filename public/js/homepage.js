@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const intro = document.querySelector(".intro");
 const more = document.querySelector(".more");
 const mark = document.querySelector(".mark");
@@ -125,8 +123,11 @@ tl.from(".block",1,{
       scrub: 1,
       end: () => "+=" + (container.offsetWidth - innerWidth)
     }
-})
+  })
   
+  
+<<<<<<< Updated upstream
+=======
 var virtualFridge = [];
 
 const addIngredient = (event) => {
@@ -145,34 +146,18 @@ document.getElementById('addbtn').addEventListener('click', addIngredient);
 >>>>>>> Stashed changes
 const newFormHandler = async (event) => {
     event.preventDefault();
-    
-    if (virtualFridge > 0) {
+  
+    const ingredientName = document.querySelector('#ingredient-name').value.trim();
+  
+    if (ingredientName) {
       const response = await fetch(`/api/items`, {
         method: 'POST',
-        body: JSON.stringify({ virtualFridge }),
+        body: JSON.stringify({ ingredientName }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-
-
     }
-    var ingredients = JSON.stringify(virtualFridge);
-    var apiUrl = '' + ingredients;
-    var apiKey = '';
-    fetch(apiUrl)
-    .then(function (res) {
-        return res.json()
-    })
-    .then(function (data) {
-        var recipe1 = data[0];
-        document.getElementById('recipe1title').innerHTML(recipe1.title);
-        document.getElementById('recipe1list').innerHTML(recipe1.list);
-        document.getElementById('recipe1instructions').innerHTML(recipe1.instructions);
-        document.getElementById('recipe1image').src=recipe1.image;
-        //copy paste for more cards w ingredients.
-    })
-
 };
   
 const delButtonHandler = async (event) => {
