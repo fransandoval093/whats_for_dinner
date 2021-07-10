@@ -6,14 +6,32 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Look for a recipe:</h3>
+    <h3>Add Ingredients:</h3>
+
+    <form class="form new-recipe-form">
+      <div class="form-group">
+        <label for="ingredient-name">Ingredient:</label>
+        <input class="form-input" type="text" id="ingredient-name" name="ingredient-name" />
+        <button id='addbtn'>Add Ingredient</button>
+      </div>
+    </form>
+  </div>
+  <h3>Look for a recipe:</h3>
 
     <form class="form new-recipe-form">
       <div class="form-group">
         <label for="ingredient-name">Ingredients:</label>
-        <input class="form-input" type="text" id="ingredient-name" name="ingredient-name" />
+        <button id='searchbtn'>Search</button>
       </div>
     </form>
+  </div>
+  <div>
+      <div id='recipe1div'>
+          <h2 id = 'recipe1title'></h2>
+          <img id ='recipe1image' src=''>
+          <p id='recipe1ingredientlist'></p>
+          <p id='recipe1instructions'></p>
+      </div>
   </div>
 
   {{#if recipes.length}}
@@ -23,7 +41,7 @@
     {{#each recipes as |recipes|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/homepage/{{favorite.id}}">{{favorite.title}}</a></h4>
+        <h4><a href="/profile/{{favorite.id}}">{{favorite.title}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{favorite.id}}">DELETE</button>
